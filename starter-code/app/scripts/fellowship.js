@@ -24,6 +24,7 @@ var body = document.querySelector('body');
 
 
 function makeMiddleEarth() {
+
   var middle_earth  = document.createElement ('section');
   middle_earth.setAttribute('id', 'middle-earth');
   for (var i = 0; i < lands.length; i++) {
@@ -78,21 +79,34 @@ function keepItSecretKeepItSafe() {
 keepItSecretKeepItSafe();
 // Part 4
 
+var rivendell = document.querySelectorAll('article') [1];
 
 function makeBuddies() {
+  var aside = document.createElement('aside');
+  var buddylist = document.createElement('ul');
+    for (i = 0; i < buddies.length; i++) {
+      var bud = document.createElement('li');
+        bud.textContent = buddies[i];
+        buddylist.appendChild(bud);
+    }
+
+    aside.appendChild(buddylist);
+    rivendell.appendChild(aside);  
   // create an aside tag
   // attach an unordered list of the 'buddies' in the aside
   // insert your aside as a child element of rivendell
 }
-
+makeBuddies();  
 
 // Part 5
 
 
 function beautifulStranger() {
+  var findStrider = document.querySelectorAll('aside ul li ') ;
+  findStrider[3].textContent = 'Aragorn';  
   // change the 'Strider' textnode to 'Aragorn'
 }
-
+beautifulStranger();
 
 // Part 6
 
